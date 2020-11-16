@@ -1,0 +1,45 @@
+{
+    "name": "cakephp/repl",
+    "description": "REPL plugin for CakePHP",
+    "keywords": ["cakephp", "repl"],
+    "homepage": "https://github.com/cakephp/repl",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CakePHP Community",
+            "homepage": "https://github.com/cakephp/repl/graphs/contributors"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/cakephp/repl/issues",
+        "forum": "https://discourse.cakephp.org/",
+        "irc": "irc://irc.freenode.org/cakephp",
+        "slack": "https://cakesf.herokuapp.com/"
+    },
+    "require": {
+        "php": ">=7.2.0",
+        "cakephp/cakephp": "^4.0",
+        "psy/psysh": "@stable"
+    },
+    "require-dev": {
+        "cakephp/cakephp-codesniffer": "^4.0",
+        "phpunit/phpunit": "^8.5 || ^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cake\\Repl\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cake\\Repl\\Test\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
