@@ -24,8 +24,13 @@ Load the plugin by adding the following statement to `Application::bootstrapCli(
 method in the **src/Application.php** file of your application:
 
 ```php
-$this->addPlugin('Cake/Repl');
+if (Configure::read('debug)) {
+    $this->addPlugin('Cake/Repl');
+}
 ```
+
+Make sure to use either "debug mode" check to load it, or wrap it in a try/catch block.
+Otherwise it will also try to load in production, where the require-dev plugins are not available and shouldn't be.
 
 ## Documentation
 
