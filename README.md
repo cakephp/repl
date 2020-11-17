@@ -3,7 +3,11 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
 [![Total Downloads](https://img.shields.io/packagist/dt/cakephp/repl.svg?style=flat-square)](https://packagist.org/packages/cakephp/repl)
 
-This is a REPL plugin for CakePHP 4.
+This is a REPL plugin for CakePHP 4. It provides an interactive command
+prompt that lets you interact with and inspect objects in your application.
+
+It also provides several global functions to make debugging and interactive
+sessions simpler.
 
 ## Installation
 
@@ -18,6 +22,7 @@ composer require --dev cakephp/repl
 
 Load the plugin by adding the following statement to `Application::bootstrapCli()`
 method in the **src/Application.php** file of your application:
+
 ```php
 $this->addPlugin('Cake/Repl');
 ```
