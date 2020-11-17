@@ -24,7 +24,7 @@ Load the plugin by adding the following statement to `Application::bootstrapCli(
 method in the **src/Application.php** file of your application:
 
 ```php
-if (Configure::read('debug)) {
+if (Configure::read('debug')) {
     $this->addPlugin('Cake/Repl');
 }
 ```
