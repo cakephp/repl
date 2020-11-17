@@ -17,7 +17,6 @@ declare(strict_types=1);
 
 use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
-use Cake\Routing\Router;
 
 if (!function_exists('breakpoint') && (PHP_SAPI === 'cli' || PHP_SAPI === 'phpdbg')) {
     /**
