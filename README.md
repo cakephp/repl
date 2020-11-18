@@ -1,4 +1,4 @@
-# Repl plugin for CakePHP
+# REPL plugin for CakePHP
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.txt)
 [![Total Downloads](https://img.shields.io/packagist/dt/cakephp/repl.svg?style=flat-square)](https://packagist.org/packages/cakephp/repl)
