@@ -35,4 +35,4 @@ Otherwise it will also try to load in production, where the require-dev plugins 
 
 ## Documentation
 
-Full documentation of the plugin can be found on the [CakePHP Cookbook](https://book.cakephp.org/repl/1/).
+Full documentation of the plugin can be found on the [CakePHP Cookbook](https://book.cakephp.org/4/en/console-commands/repl.html).
