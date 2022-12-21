@@ -20,28 +20,22 @@ use Cake\Console\CommandCollection;
 use Cake\Core\BasePlugin;
 use Cake\Repl\Command\ConsoleCommand;
 
-class Plugin extends BasePlugin
+class ReplPlugin extends BasePlugin
 {
     /**
      * The name of this plugin
-     *
-     * @var string
      */
-    protected $name = 'Repl';
+    protected ?string $name = 'Repl';
 
     /**
      * Do bootstrapping or not
-     *
-     * @var bool
      */
-    protected $bootstrapEnabled = false;
+    protected bool $bootstrapEnabled = false;
 
     /**
      * Load routes or not
-     *
-     * @var bool
      */
-    protected $routesEnabled = false;
+    protected bool $routesEnabled = false;
 
     /**
      * Add console commands for the plugin.

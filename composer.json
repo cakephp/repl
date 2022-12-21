@@ -36,7 +36,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Cake\\Repl\\Test\\": "tests/"
+            "Cake\\Repl\\Test\\": "tests/",
+            "TestApp\\": "tests/TestApp/"
         }
     },
     "config": {

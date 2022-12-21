@@ -14,6 +14,9 @@ declare(strict_types=1);
  * @since     0.1.0
  * @license   https://opensource.org/licenses/mit-license.php MIT License
  */
+use Cake\Core\Configure;
+use Cake\Core\Plugin;
+use Cake\Repl\ReplPlugin;
 
 /**
  * Test suite bootstrap.
@@ -36,7 +39,24 @@ $root = $findRoot(__FILE__);
 unset($findRoot);
 chdir($root);
 
-require $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
+define('ROOT', $root);
+define('APP', ROOT . '/tests/TestApp/');
+define('TMP', sys_get_temp_dir() . '/');
+define('CONFIG', ROOT . '/tests/TestApp/config/');
+define('CACHE', TMP . 'cache' . DS);
+define('CORE_PATH', ROOT . '/vendor/cakephp/cakephp/');
+define('CAKE', CORE_PATH . 'src/');
+
+require ROOT . '/vendor/autoload.php';
+require CORE_PATH . 'config/bootstrap.php';
 
 define('PLUGIN_ROOT', $root . DS);
 define('PLUGIN_TESTS', $root . DS . 'tests' . DS);
+
+Configure::write('App', [
+    'base' => '',
+    'namespace' => 'TestApp',
+    'encoding' => 'UTF-8',
+]);
+
+Plugin::getCollection()->add(new ReplPlugin());
