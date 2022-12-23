@@ -16,6 +16,7 @@ declare(strict_types=1);
  */
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
+use Cake\Datasource\ConnectionManager;
 use Cake\Repl\ReplPlugin;
 
 /**
@@ -60,3 +61,9 @@ Configure::write('App', [
 ]);
 
 Plugin::getCollection()->add(new ReplPlugin());
+
+if (!getenv('DB_URL')) {
+    putenv('DB_URL=sqlite:///:memory:');
+}
+
+ConnectionManager::setConfig('test', ['url' => getenv('DB_URL')]);
