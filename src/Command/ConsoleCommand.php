@@ -34,6 +34,7 @@ class ConsoleCommand extends Command
      * @param \Cake\Console\Arguments $args The command arguments.
      * @param \Cake\Console\ConsoleIo $io The console io
      * @return int|null|void The exit code or null for success
+     * @phpcsSuppress SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingNativeTypeHint
      */
     public function execute(Arguments $args, ConsoleIo $io)
     {
@@ -59,7 +60,7 @@ class ConsoleCommand extends Command
     public function buildOptionParser(ConsoleOptionParser $parser): ConsoleOptionParser
     {
         $parser->setDescription(
-            'This shell provides a REPL that you can use to interact with ' .
+            'This command provides a REPL that you can use to interact with ' .
             'your application in a command line designed to run PHP code. ' .
             'You can use it to run adhoc queries with your models, or ' .
             'explore the features of CakePHP and your application.'
