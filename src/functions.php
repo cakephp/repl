@@ -28,7 +28,7 @@ if (!function_exists('breakpoint') && (PHP_SAPI === 'cli' || PHP_SAPI === 'phpdb
      * ```
      *
      * @return string
-     * @link http://psysh.org/
+     * @link https://psysh.org/
      */
     function breakpoint(): ?string
     {
